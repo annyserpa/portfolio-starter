@@ -8,19 +8,25 @@ const services = [
     name: "Mercado Livre",
     description:
       "Uma aplicação React.Js inspirada no site do Mercado Livre com design e o consumo de API.",
-    link: "https://mercado-livre-annyserpa.netlify.app/",
+    link: "Clique Aqui",
   },
+]
+
+const servicesPk = [
   {
     name: "Pokémon List",
     description:
       "Uma aplicação HTML, CSS e JavaScript listando alguns pokémons.",
-    link: "https://pokemon-list-annyserpa.netlify.app/",
+    link: "Clique Aqui",
   },
+]
+
+const servicesNf = [
   {
     name: "Netflix",
     description:
       "Uma aplicação HTML, CSS e JavaScript inspirada no site e design da Netflix.",
-    link: "https://netflix-project-annyserpa.netlify.app/",
+    link: "Clique Aqui",
   },
 ]
 
@@ -76,13 +82,85 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col flex-1 items-end">
                       <a
-                        href="www.google.com"
+                        href="https://mercado-livre-annyserpa.netlify.app/" target="blank"
                         className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
                       >
                         <BsArrowUpRight />
                       </a>
                       <a
-                        href="www.google.com"
+                        href="https://mercado-livre-annyserpa.netlify.app/" target="blank"
+                        className="text-gradient text-sm text-[10px]"
+                      >
+                        {link}
+                      </a>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div>
+              {servicesPk.map((service, index) => {
+                //destructure service
+                const { name, description, link } = service
+                return (
+                  <div
+                    className="border-b border-white/20 h-[146px] mb-[38px] flex"
+                    key={index}
+                  >
+                    <div className="max-w-[476px] ">
+                      <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
+                        {name}
+                      </h4>
+                      <p className="font-secondary leading-tight">
+                        {description}
+                      </p>
+                    </div>
+                    <div className="flex flex-col flex-1 items-end">
+                      <a
+                        href="https://pokemon-list-annyserpa.netlify.app/" target="blank"
+                        className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
+                      >
+                        <BsArrowUpRight />
+                      </a>
+                      <a
+                        href="https://pokemon-list-annyserpa.netlify.app/" target="blank"
+                        className="text-gradient text-sm text-[10px]"
+                      >
+                        {link}
+                      </a>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div>
+              {servicesNf.map((service, index) => {
+                //destructure service
+                const { name, description, link } = service
+                return (
+                  <div
+                    className="border-b border-white/20 h-[146px] mb-[38px] flex"
+                    key={index}
+                  >
+                    <div className="max-w-[476px] ">
+                      <h4 className="text-[20px] tracking-wider font-primary font-semibold mb-6">
+                        {name}
+                      </h4>
+                      <p className="font-secondary leading-tight">
+                        {description}
+                      </p>
+                    </div>
+                    <div className="flex flex-col flex-1 items-end">
+                      <a
+                        href="https://netflix-project-annyserpa.netlify.app/" target="blank"
+                        className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
+                      >
+                        <BsArrowUpRight />
+                      </a>
+                      <a
+                        href="https://netflix-project-annyserpa.netlify.app/" target="blank"
                         className="text-gradient text-sm text-[10px]"
                       >
                         {link}
